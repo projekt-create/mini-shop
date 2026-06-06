@@ -1,0 +1,139 @@
+{
+    "banners": [
+        { 
+            "id": 1,
+            "title": "Iphone 14",
+            "image": "https://images.unsplash.com/photo-1726587912121-ea21fcc57ff8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "ctaText": "Batafsil",
+            "productsId": 2
+        },
+        { 
+            "id": 2,
+            "title": "Samsung s25",
+            "image": "https://images.unsplash.com/photo-1738830234395-a351829a1c7b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "ctaText": "Batafsil",
+            "productsId": 3
+        },
+        { 
+            "id": 3,
+            "title": "Samsung RS-90F65D1FWT",
+            "image": "https://images.unsplash.com/photo-1721613877687-c9099b698faa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "ctaText": "Batafsil",
+            "productsId": 4
+        }
+    ],
+    "categories": [
+        { 
+            "id": 1,
+            "name": "Laptop", 
+            "icon": "💻"
+        },
+        { 
+            "id": 2,
+            "name": "Phone", 
+            "icon": "📱"
+        },
+        { 
+            "id": 3,
+            "name": "Fridge", 
+            "icon": "🍽"
+        },
+        { 
+            "id": 4,
+            "name": "Cars", 
+            "icon": "🚗"
+        }
+    ],
+    "products": [
+        { 
+            "id": 1, 
+            "title":"Mackbook Pro",
+            "description": "Apple M5 chip 10-core CPU with 4 super cores and 6 efficiency cores",
+            "price": 12990000,
+            "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "categoryId": 1,
+            "category": "Laptop",
+            "discount": 8,
+            "rating": 4.5
+        },
+        { 
+            "id": 2, 
+            "title":"Iphone 14",
+            "description": "The iPhone 14 features a 6.1-inch Super Retina XDR OLED display with a 2532-by-1170 pixel resolution (460 ppi), supporting HDR and True",
+            "price": 10990000,
+            "image": "https://images.unsplash.com/photo-1726587912121-ea21fcc57ff8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "categoryId": 2,
+            "category": "Phone",
+            "discount": 10,
+            "rating": 4.8 
+        },
+        { 
+            "id": 3, 
+            "title":"Samsung s25", 
+            "description": "The Samsung Galaxy S25 is a 6.2-inch compact flagship phone released in January 2025, featuring a powerful Snapdragon 8 Elite chip, 12GB RAM, a 50MP triple camera, a 4,000 mAh battery, and 7 years of Android updates.",
+            "price": 9990000,
+            "image": "https://images.unsplash.com/photo-1738830234395-a351829a1c7b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "categoryId": 2,
+            "category": "Phone",
+            "discount": 5,
+            "rating": 4.9 
+        },
+        { 
+            "id": 4, 
+            "title":"Samsung RS-90F65D1FWT", 
+            "description": "The Samsung RS90F65D1FWT is a 641-liter Bespoke Side-by-Side refrigerator, featuring an AI Home 9-inch touchscreen, SmartThings Wi-Fi control, Auto Open Door, No Frost technology, and an energy-saving AI compressor.",
+            "price": 12990000,
+            "image": "https://images.unsplash.com/photo-1721613877687-c9099b698faa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "categoryId": 3,
+            "category": "Fridge",
+            "discount": 8,
+            "rating": 4.4
+        },
+        { 
+            "id": 5, 
+            "title":"BMW M5 Competition", 
+            "description": "The BMW M5 Competition is a high-performance luxury sedan equipped with a 4.4-liter Twin-Turbo V8 engine generating 625 horsepower, an M xDrive all-wheel-drive system, and track-tuned suspension, accelerating from 0 to 100 km/h in just 3.3 seconds.",
+            "price": 2499000000,
+            "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "categoryId": 4,
+            "category": "cars",
+            "discount": 8,
+            "rating": 4.9
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "Ml9wD@example.com",
+            "password": "123456",
+            "isAdmin": true,
+            "basket": [
+                {
+                    "id": 1,
+                    "productId": 2,
+                    "quantity": 2
+                },
+                {
+                    "id": 2,
+                    "productId": 3,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Cagin Ught",
+            "email": "4cH5w@example.com",
+            "password": "123456",
+            "isAdmin": false
+        },
+        {
+            "id": 3,
+            "name": "Karim Karimov",
+            "email": "Hx4Vg@example.com",
+            "password": "123456",
+            "isAdmin": false
+        }
+    ]
+}

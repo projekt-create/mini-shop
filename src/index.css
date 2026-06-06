@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html,
+body {
+  overflow-x: hidden;
+  --scrollbar-width: thin;
+  --scrollbar-color: #38bdf8 #050505;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8, #075985);
+  border: 2px solid #050505;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7dd3fc, #0284c7);
+}
