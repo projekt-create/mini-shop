@@ -3,9 +3,7 @@ import { useGetBaners } from "../../hooks/get/useGetBanners";
 
 const HeroSwiper = () => {
   const { data = [], isSuccess } = useGetBaners();
-
   const sectionRef = useRef(null);
-
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSwipe, setIsSwipe] = useState(0);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -14,22 +12,14 @@ const HeroSwiper = () => {
   const isSmallBanner = !isScrolled || isThirdBanner;
 
   const scrollToProduct = (productId) => {
-    const target =
-      document.getElementById(`product-${productId}`) ||
-      document.getElementById("products");
-
-    target?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    const target = document.getElementById(`product-${productId}`) || document.getElementById("products");
+    target?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
-
-      const sectionTop =
-        sectionRef.current.getBoundingClientRect().top + window.scrollY;
+      const sectionTop = sectionRef.current.getBoundingClientRect().top + window.scrollY;
       const sectionHeight = sectionRef.current.offsetHeight;
       const scrollInHero = Math.max(0, window.scrollY - sectionTop);
       const sectionEnd = sectionTop + sectionHeight - window.innerHeight;
@@ -38,13 +28,7 @@ const HeroSwiper = () => {
       setIsAtEnd(window.scrollY >= sectionEnd - 1);
 
       const slide = Math.floor(scrollInHero / window.innerHeight);
-
-      setIsSwipe(
-        Math.max(
-          0,
-          Math.min(slide, data.length - 1)
-        )
-      );
+      setIsSwipe(Math.max(0, Math.min(slide, data.length - 1)));
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -61,9 +45,7 @@ const HeroSwiper = () => {
     <div
       ref={sectionRef}
       className="relative w-full"
-      style={{
-        height: `${Math.max(data.length * 100, 100)}vh`,
-      }}
+      style={{ height: `${Math.max(data.length * 100, 100)}vh` }}
     >
       <div
         className="overflow-hidden"
@@ -73,9 +55,7 @@ const HeroSwiper = () => {
           height: isSmallBanner ? "80vh" : "100vh",
           top: isAtEnd
             ? `calc(100% - 100vh + ${isSmallBanner ? "100px" : "0px"})`
-            : isSmallBanner
-              ? "100px"
-              : "0",
+            : isSmallBanner ? "100px" : "0",
           left: isSmallBanner ? "10%" : "0",
           transition: isAtEnd
             ? "none"
@@ -100,12 +80,11 @@ const HeroSwiper = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white hover:bg-black/50 transition-all duration-500 ease-in-out">
-                <h1 className="text-5xl font-bold">
-                  {item.title}
-                </h1>
-
-                <button className="mt-5 px-6 py-3 bg-white text-black rounded-full hover:bg-sky-800 transition-all duration-500 ease-in-out active:bg-sky-900" 
-                 onClick={() => scrollToProduct(item.productsId)}>
+                <h1 className="text-5xl font-bold">{item.title}</h1>
+                <button
+                  className="mt-5 px-6 py-3 bg-white text-black rounded-full hover:bg-sky-800 transition-all duration-500 ease-in-out active:bg-sky-900" 
+                  onClick={() => scrollToProduct(item.productsId)}
+                >
                   {item.ctaText}
                 </button>
               </div>

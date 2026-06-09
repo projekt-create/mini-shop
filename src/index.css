@@ -3,6 +3,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   --scrollbar-width: thin;
   --scrollbar-color: #38bdf8 #050505;
 }
@@ -25,3 +26,5 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #7dd3fc, #0284c7);
 }
+
+
