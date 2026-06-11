@@ -15,13 +15,9 @@ const CartPage = () => {
   const removeMutation = useRemoveFromCart()
   const navigate = useNavigate()
 
-  useEffect(() => {
-    if (!user) navigate('/login')
-  }, [user, navigate])
+  const guestCart = JSON.parse(localStorage.getItem('guestCart')) || []
+  const basket = user ? (user.basket || []) : guestCart
 
-  if (!user) return null
-
-  const basket = user.basket || []
   const getProduct = (productId) => products.find(p => p.id === productId)
 
   const totalPrice = basket.reduce((sum, item) => {
@@ -114,7 +110,17 @@ const CartPage = () => {
                   <span className='text-white/60 font-medium'>Jami:</span>
                   <span className='text-sky-400 font-bold text-xl'>{totalPrice.toLocaleString('uz-UZ')} so'm</span>
                 </div>
-                <button onClick={() => toast.success("Buyurtma jonatildi! Tez orada siz bilan bog'lanamiz 🚀")} className='w-full py-3 bg-sky-500 hover:bg-sky-400 text-white font-bold rounded-xl transition-all duration-300 active:scale-95'>
+                <button 
+                  onClick={() => {
+                    if (!user) {
+                      toast.error("Buyurtma berish uchun tizimga kiring!")
+                      navigate('/login')
+                    } else {
+                      toast.success("Buyurtma jo'natildi! Tez orada siz bilan bog'lanamiz 🚀")
+                    }
+                  }} 
+                  className='w-full py-3 bg-sky-500 hover:bg-sky-400 text-white font-bold rounded-xl transition-all duration-300 active:scale-95'
+                >
                   Buyurtma berish
                 </button>
                 <button onClick={() => navigate('/')} className='w-full py-3 bg-white/5 hover:bg-white/10 text-white/70 font-medium rounded-xl transition-all duration-300 text-sm'>

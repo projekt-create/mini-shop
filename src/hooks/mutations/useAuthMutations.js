@@ -10,16 +10,48 @@ export const useLoginMutation = () => {
 
   return useMutation({
     mutationFn: async ({ email, password }) => {
-      const res = await axios.get('http://localhost:4000/users')
-      const users = res.data
-      const found = users.find(u => u.email === email && u.password === password)
-      if (!found) throw new Error("Email yoki parol noto'g'ri!")
-      return found
+      const res = await axios.get(`http://localhost:4000/users?email=${email}&password=${password}`)
+      if (res.data.length === 0) throw new Error('Email yoki parol noto\'g\'ri')
+      return res.data[0]
     },
-    onSuccess: (user) => {
-      login(user)
-      toast.success(`Xush kelibsiz, ${user.name}! 🎉`)
-      navigate(user.isAdmin ? '/admin' : '/')
+    onSuccess: async (userData) => {
+      const guestCart = JSON.parse(localStorage.getItem('guestCart')) || []
+      const guestLikes = JSON.parse(localStorage.getItem('guestLikes')) || []
+
+      try {
+        if (guestCart.length > 0 || guestLikes.length > 0) {
+          const mergedLikes = [...new Set([...(userData.likes || []), ...guestLikes])]
+
+          const mergedBasket = [...(userData.basket || [])]
+          guestCart.forEach(gItem => {
+            const existing = mergedBasket.find(uItem => uItem.productId === gItem.productId)
+            if (existing) {
+              existing.quantity += gItem.quantity
+            } else {
+              const nextId = mergedBasket.length > 0 ? Math.max(...mergedBasket.map(i => i.id)) + 1 : 1
+              mergedBasket.push({ ...gItem, id: nextId })
+            }
+          })
+
+          const updatedRes = await axios.patch(`http://localhost:4000/users/${userData.id}`, {
+            basket: mergedBasket,
+            likes: mergedLikes
+          })
+
+          login(updatedRes.data)
+          localStorage.removeItem('guestCart')
+          localStorage.removeItem('guestLikes')
+          toast.success(`Xaridlar birlashtirildi! Xush kelibsiz, ${updatedRes.data.name}! 🎉`)
+        } else {
+          login(userData)
+          toast.success(`Xush kelibsiz, ${userData.name}! 🎉`)
+        }
+      } catch {
+        login(userData)
+        toast.success(`Xush kelibsiz, ${userData.name}! 🎉`)
+      }
+
+      navigate(userData.isAdmin ? '/admin' : '/')
     },
     onError: (error) => {
       toast.error(error.message || 'Server bilan ulanishda xatolik')

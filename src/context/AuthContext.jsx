@@ -14,14 +14,12 @@ export const AuthProvider = ({ children }) => {
 
   const login = (userData) => {
     localStorage.setItem('user', JSON.stringify(userData))
-    localStorage.setItem('token', userData.id)
     localStorage.setItem('isAdmin', userData.isAdmin)
     setUser(userData)
   }
 
   const logout = () => {
     localStorage.removeItem('user')
-    localStorage.removeItem('token')
     localStorage.removeItem('isAdmin')
     setUser(null)
   }
