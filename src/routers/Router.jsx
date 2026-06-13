@@ -6,6 +6,7 @@ import NotFound from '../page/NotFound'
 import CartPage from '../page/CartPage'
 import AdminPage from '../page/AdminPage'
 import WishlistPage from '../page/WishlistPage'
+import ViewCart from '../components/ViewCart'
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/product/:id' element={<ViewCart/>} />
         <Route path='/wishlist' element={<WishlistPage />} />
         <Route path='/admin' element={<AdminPage />} />
         <Route path='*' element={<NotFound />} />

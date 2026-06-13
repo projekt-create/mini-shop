@@ -45,61 +45,166 @@
     }
   ],
   "products": [
-    {
-      "id": "1",
-      "title": "Mackbook Pro",
-      "description": "Apple M5 chip 10-core CPU with 4 super cores and 6 efficiency cores",
-      "price": 12990000,
-      "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categoryId": 1,
-      "category": "Laptop",
-      "discount": 8,
-      "rating": 4.5
-    },
-    {
-      "id": "2",
-      "title": "Iphone 14",
-      "description": "The iPhone 14 features a 6.1-inch Super Retina XDR OLED display",
-      "price": 10990000,
-      "image": "https://images.unsplash.com/photo-1726587912121-ea21fcc57ff8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categoryId": 2,
-      "category": "Phone",
-      "discount": 10,
-      "rating": 4.8
-    },
-    {
-      "id": "3",
-      "title": "Samsung s25",
-      "description": "Snapdragon 8 Elite chip, 12GB RAM, 50MP triple camera, 4,000 mAh battery",
-      "price": 9990000,
-      "image": "https://images.unsplash.com/photo-1738830234395-a351829a1c7b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categoryId": 2,
-      "category": "Phone",
-      "discount": 5,
-      "rating": 4.9
-    },
-    {
-      "id": "4",
-      "title": "Samsung RS-90F65D1FWT",
-      "description": "641-liter Bespoke Side-by-Side refrigerator with AI Home 9-inch touchscreen",
-      "price": 12990000,
-      "image": "https://images.unsplash.com/photo-1721613877687-c9099b698faa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categoryId": 3,
-      "category": "Fridge",
-      "discount": 8,
-      "rating": 4.4
-    },
-    {
-      "id": "5",
-      "title": "BMW M5 Competition",
-      "description": "4.4-liter Twin-Turbo V8, 625 horsepower, 0-100 km/h in 3.3 seconds",
-      "price": 2499000000,
-      "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categoryId": 4,
-      "category": "Cars",
-      "discount": 8,
-      "rating": 4.9
-    }
+      {
+        "id": "1",
+        "title": "Mackbook Pro",
+        "description": "Apple M5 chip 10-core CPU with 4 super cores and 6 efficiency cores. Ushbu model 14.2 dyuymli yuqori aniqlikdagi Liquid Retina XDR displey bilan jihozlangan bo'lib, 120Hz gacha ProMotion texnologiyasini qo'llab-quvvatlaydi. 16GB operativ xotira (Unified Memory) va 512GB o'ta tezkor SSD xotiraga ega. Batareya quvvati bir marta quvvatlanganda 22 soatgacha videoni ko'rish imkonini beradi. Dasturchilar, dizaynerlar va og'ir grafik proyektlar ustida ishlovchi mutaxassislar uchun eng mukammal tanlov.",
+        "price": 12990000,
+        "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop",
+        "categoryId": 1,
+        "category": "Laptop",
+        "discount": 8,
+        "rating": 4.5,
+        "count": 15,
+        "img": [
+          "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1000&auto=format&fit=crop"
+        ],
+        "comments": [
+          {
+            "user": "Farrux",
+            "rating": 5,
+            "text": "M5 chipi shunchaki kosmos! Render qilishda umuman qizib ketmayapti, batareyasi ham 2 kunga bemalol yetyapti."
+          },
+          {
+            "user": "Madina",
+            "rating": 4,
+            "text": "Ekran sifati va ovoz chiqishi ajoyib darajada. Yagona minus - narxi biroz baland, lekin sifatiga arziydi."
+          },
+          {
+            "user": "Diyorbek",
+            "rating": 4.5,
+            "text": "Dasturlash uchun sotib oldim. Docker va og'ir IDE'lar bir vaqtda muammosiz uchib ishlayapti."
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Iphone 14",
+        "description": "The iPhone 14 features a 6.1-inch Super Retina XDR OLED display. Kuchaytirilgan Apple A15 Bionic protsessori bilan jihozlangan bo'lib, har qanday zamonaviy o'yin va ilovalarni yuqori tezlikda ochadi. Orqa qismida 12MP asosiy va ultra-keng burchakli kameralar joylashgan. Yangilangan 'Action Mode' funksiyasi tufayli videolarni yugurib turganda ham shtativsiz silliq tasvirga olish mumkin. Ceramic Shield old oynasi zarbalardan ishonchli himoya qiladi va suv o'tkazmaydigan IP68 korpusiga ega.",
+        "price": 10990000,
+        "image": "https://images.unsplash.com/photo-1726587912121-ea21fcc57ff8?q=80&w=880&auto=format&fit=crop",
+        "categoryId": 2,
+        "category": "Phone",
+        "discount": 10,
+        "rating": 4.8,
+        "count": 28,
+        "img": [
+          "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000&auto=format&fit=crop"
+        ],
+        "comments": [
+          {
+            "user": "Jasur",
+            "rating": 5,
+            "text": "Kamerasi juda zo'r chiqar ekan, ayniqsa tungi rejimda rasmga olishi ancha yaxshilangan."
+          },
+          {
+            "user": "Asal",
+            "rating": 4.8,
+            "text": "Rangi juda chiroyli, ushlashga qulay. Batareyasi kechgacha bemalol chidab beryapti."
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Samsung s25",
+        "description": "Snapdragon 8 Elite chip, 12GB RAM, 50MP triple camera, 4,000 mAh battery. 6.2 dyuymli Dynamic AMOLED 2X ekran, 120Hz yangilanish tezligi va ko'z uchun xavfsiz Eye Comfort Shield tizimiga ega. matrix ranglar palitrasi o'ta tiniq. Ushbu modelda eng so'nggi Galaxy AI sun'iy intellekt funksiyalari mavjud bo'lib, ular matnlarni tarjima qilish, suratlarni aqlli tahrirlash va qidiruvni osonlashtirishga yordam beradi. 45W tezkor quvvatlash texnologiyasi bilan jihozlangan.",
+        "price": 9990000,
+        "image": "https://images.unsplash.com/photo-1738830234395-a351829a1c7b?q=80&w=1632&auto=format&fit=crop",
+        "categoryId": 2,
+        "category": "Phone",
+        "discount": 5,
+        "rating": 4.9,
+        "count": 12,
+        "img": [
+          "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1610945415295-d9b226b4603e?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1583573636246-18cb2246697f?q=80&w=1000&auto=format&fit=crop"
+        ],
+        "comments": [
+          {
+            "user": "Sardor",
+            "rating": 5,
+            "text": "Snapdragon 8 Elite flagman protsessor ekanligi srazu bilinadi. O'yinlarda umuman qotish yo'q, displey ranglari juda yorqin."
+          },
+          {
+            "user": "Eldor",
+            "rating": 5,
+            "text": "Galaxy AI funksiyalari dars jarayonida va chet tillarini tarjima qilishda juda qo'l kelyapti. Tavsiya qilaman!"
+          },
+          {
+            "user": "Shahlo",
+            "rating": 4.7,
+            "text": "Dizayni juda ixcham va nafis. Kameralari yaqinlashtirganda ham tiniq olyapti."
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Samsung RS-90F65D1FWT",
+        "description": "641-liter Bespoke Side-by-Side refrigerator with AI Home 9-inch touchscreen. Innovatsion muzlatgich eshigidagi 9 dyuymli sensorli ekran orqali oilaviy taqvimni boshqarish, retseptlar ko'rish va mahsulotlarning yaroqlilik muddatini kuzatish mumkin. Twin Cooling Plus texnologiyasi muzlatgich va sovitish kameralarida namlikni alohida ushlab turadi, bu esa hidlar aralashib ketmasligini va oziq-ovqatlar uzoq vaqt yangidek saqlanishini ta'minlaydi. Inverterli kompressor energiya sarfini minimal darajaga tushiradi.",
+        "price": 12990000,
+        "image": "https://images.unsplash.com/photo-1721613877687-c9099b698faa?q=80&w=1170&auto=format&fit=crop",
+        "categoryId": 3,
+        "category": "Fridge",
+        "discount": 8,
+        "rating": 4.4,
+        "count": 4,
+        "img": [
+          "https://object.pscloud.io/cms/cms/Uploads/14_photoroom_2.webp",
+          "https://images.unsplash.com/photo-1721613877687-c9099b698faa?q=80&w=1170&auto=format&fit=crop",
+          "https://object.pscloud.io/cms/cms/Uploads/634447_photoroom_12_NQrJCc.webp"
+        ],
+        "comments": [
+          {
+            "user": "Nigora",
+            "rating": 4,
+            "text": "Muzlatgich juda keng, ichiga hamma narsa sig'adi. Ekranidan oshxonada turib musiqa eshitish uchun ham foydalanamiz."
+          },
+          {
+            "user": "Olimjon",
+            "rating": 5,
+            "text": "Bespoke seriyasi dizayn jihatdan juda zamonaviy. Elektr energiyasini ham ancha tejaydi, ovozi umuman eshitilmaydi."
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "BMW M5 Competition",
+        "description": "4.4-liter Twin-Turbo V8, 625 horsepower, 0-100 km/h in 3.3 seconds. Ushbu sport sedan M xDrive to'liq uzatmali aqlli tizimi bilan jihozlangan bo'lib, haydovchiga istalgan vaqtda mashinani faqat orqa uzatmali (RWD) rejimga o'tkazish imkonini beradi. Uglerod tolali (Carbon Fiber) tom vaznni kamaytiradi va og'irlik markazini pastga tushiradi. Salonda yuqori sifatli Merino charm o'rindiqlari, M sport rul va professional Bowers & Wilkins audio tizimi mavjud. Haqiqiy tezlik va qulaylik ishqibozlari uchun.",
+        "price": 2499000000,
+        "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1170&auto=format&fit=crop",
+        "categoryId": 4,
+        "category": "Cars",
+        "discount": 8,
+        "rating": 4.9,
+        "count": 2,
+        "img": [
+          "https://images.unsplash.com/photo-1607853554439-0069ec0f29b6?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1724391114112-c83ad59f1d5f?q=80&w=1229&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=1000&auto=format&fit=crop"
+        ],
+        "comments": [
+          {
+            "user": "Shaxzod",
+            "rating": 5,
+            "text": "Tushda ko'radigan mashina! Dinamikasi, boshqaruvchanligi gap-so'zsiz 10 tadan 10 ball. Motor ovozi odamni mast qiladi."
+          },
+          {
+            "user": "Dilshod",
+            "rating": 5,
+            "text": "Ham oilaviy qulay sedan, ham trassada yirtqich sportkar. M5 baribir afsona!"
+          },
+          {
+            "user": "Bekzod",
+            "rating": 4.8,
+            "text": "Boshqaruvi juda aqlli, trekda o'zingizni juda ishonchli his qilasiz. Shassi sozlamalari dahshat moslangan."
+          }
+        ]
+      }
   ],
   "users": [
     {
@@ -108,19 +213,10 @@
       "email": "Ml9wD@example.com",
       "password": "123456",
       "isAdmin": true,
-      "basket": [
-        {
-          "id": 1,
-          "productId": "3",
-          "quantity": 1
-        },
-        {
-          "id": 2,
-          "productId": "2",
-          "quantity": 1
-        }
-      ],
-      "likes": []
+      "basket": [],
+      "likes": [
+        "2"
+      ]
     },
     {
       "id": "2",

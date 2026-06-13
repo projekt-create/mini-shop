@@ -4,6 +4,8 @@ import { useAddToCart, useToggleLike, useChangeCartQty } from '../../hooks/useCa
 import { useGetProducts } from '../../hooks/get/useGetProducts'
 import { FiHeart, FiShoppingCart, FiStar, FiMinus, FiPlus } from 'react-icons/fi'
 import { FaHeart } from 'react-icons/fa'
+import { MdPreview } from "react-icons/md";
+
 
 const ProductCard = ({ activeCategory }) => {
   const { data, isSuccess } = useGetProducts()
@@ -90,32 +92,38 @@ const ProductCard = ({ activeCategory }) => {
               </div>
             </div>
 
-            {inCart ? (
-              <div className='w-full flex items-center justify-between gap-2 p-1 rounded-xl bg-sky-500/20 border border-sky-500/30'>
+            <div className='flex items-center justify-between'>
+              {inCart ? (
+                <div className='w-[45%] flex items-center justify-between gap-2 p-1 rounded-xl bg-sky-500/20 border border-sky-500/30'>
+                  <button
+                    onClick={() => changeQtyMutation.mutate({ productId: item.id, delta: -1 })}
+                    className='w-10 h-10 flex items-center justify-center rounded-lg bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition-all'
+                  >
+                    <FiMinus />
+                  </button>
+                  <span className='text-white font-bold text-lg'>{inCart.quantity}</span>
+                  <button
+                    onClick={() => changeQtyMutation.mutate({ productId: item.id, delta: 1 })}
+                    className='w-10 h-10 flex items-center justify-center rounded-lg bg-sky-500 text-white hover:bg-sky-600 transition-all shadow-lg shadow-sky-500/20'
+                  >
+                    <FiPlus />
+                  </button>
+                </div>
+              ) : (
                 <button
-                  onClick={() => changeQtyMutation.mutate({ productId: item.id, delta: -1 })}
-                  className='w-10 h-10 flex items-center justify-center rounded-lg bg-sky-500/20 text-sky-400 hover:bg-sky-500 hover:text-white transition-all'
+                  onClick={() => addToCartMutation.mutate(item.id)}
+                  disabled={addToCartMutation.isPending}
+                  className='w-[45%] flex items-center justify-center gap-2 rounded-xl bg-sky-500/20 border border-sky-500/30 py-2.5 text-[14px] font-bold text-sky-300 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all duration-300 ease'
                 >
-                  <FiMinus />
+                  <FiShoppingCart className='text-base' />
+                  {addToCartMutation.isPending ? "Qo'shilmoqda..." : "Savatga qo'shish"}
                 </button>
-                <span className='text-white font-bold text-lg'>{inCart.quantity}</span>
-                <button
-                  onClick={() => changeQtyMutation.mutate({ productId: item.id, delta: 1 })}
-                  className='w-10 h-10 flex items-center justify-center rounded-lg bg-sky-500 text-white hover:bg-sky-600 transition-all shadow-lg shadow-sky-500/20'
-                >
-                  <FiPlus />
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => addToCartMutation.mutate(item.id)}
-                disabled={addToCartMutation.isPending}
-                className='w-full flex items-center justify-center gap-2 rounded-xl bg-sky-500/20 border border-sky-500/30 py-2.5 text-[14px] font-bold text-sky-300 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all duration-300 ease'
-              >
-                <FiShoppingCart className='text-base' />
-                {addToCartMutation.isPending ? "Qo'shilmoqda..." : "Savatga qo'shish"}
+              )}
+              <button onClick={() => navigate(`/product/${item.id}`)} className='w-[45%] flex items-center justify-center gap-2 rounded-xl bg-sky-500/20 border border-sky-500/30 py-2.5 text-sky-300 hover:bg-sky-500 hover:text-white hover:border-sky-500 active:bg-white/10 active:text-sky-500 transition-all duration-300 ease'>
+                <MdPreview className='text-base text-[16px]' />
+                <span className='text-[16px] font-bold '>Batafsil</span>
               </button>
-            )}
+            </div>
           </div>
         )
       })}
